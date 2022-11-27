@@ -1,0 +1,3 @@
+[submodule "PSO2AffixingAssistant"]
+	path = PSO2AffixingAssistant
+	url = git@github.com:udf/PSO2AffixingAssistant.git
