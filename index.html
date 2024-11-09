@@ -7,5 +7,21 @@
   <a style="font-size: 0.5em;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here if you are redirected.</a>
 </body>
 <script>
-  window.location = "/PSO2AffixingAssistant";
+  var hash = window.location.hash.slice(1);
+  if (hash !== '') {
+    fetch(new URL(hash, "https://l.withsam.org"))
+      .then(res => res.json())
+      .then(res => {
+        if (r && r.url) {
+          window.location = r.url;
+        } else {
+          window.location = "/PSO2AffixingAssistant";
+        }
+      })
+      .catch(err => {
+        window.location = "/PSO2AffixingAssistant";
+      })
+  } else {
+    window.location = "/PSO2AffixingAssistant";
+  }
 </script>
